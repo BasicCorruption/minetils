@@ -1,0 +1,12 @@
+name: MineTils
+version: 0.0.1
+author: SidGames5
+main: net.ddns.mlgland.minetils.MineTils
+api-version: 1.8
+commands:
+  mttest:
+    description: "Test the plugin"
+    usage: "/mttest="
+    aliases:
+      - mtest
+      - minetilstest
