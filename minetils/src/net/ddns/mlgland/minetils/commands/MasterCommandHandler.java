@@ -11,15 +11,14 @@ public class MasterCommandHandler implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         // checks if the sender is a player
         if (!(sender instanceof Player)) {
-
+            return true;
         } else {
             Player player = (Player) sender;
             if (args.length >= 1) {
-                switch (args[0]) {
-
-                }
+                // switch (args[0]) {}
             } else {
                 player.sendMessage(ChatColor.RED + "Usage: /tw <command> [args]");
+                return true;
             }
         }
         return true;

@@ -1,4 +1,4 @@
-package net.ddns.mlgland.minetils.events.player;
+package net.ddns.mlgland.minetils.listeners.player;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
