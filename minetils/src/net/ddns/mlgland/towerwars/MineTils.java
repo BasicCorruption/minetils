@@ -20,7 +20,7 @@ public class MineTils extends JavaPlugin {
 
         getServer().getConsoleSender().sendMessage("[MineTils] Registering commands...");
         getCommand("mttest").setExecutor(new CommandTest());
-        getServer().getConsoleSender().sendMessage("[MineTils] Registered command 1/1 (task 3/3)");
+        getServer().getConsoleSender().sendMessage("[MineTils] Registered command 1/2 (task 3/3)");
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[MineTils] Plugin is now enabled");
     }
