@@ -1,8 +1,8 @@
-package net.ddns.mlgland.towerwars;
+package net.ddns.mlgland.minetils;
 
-import net.ddns.mlgland.towerwars.commands.CommandHandler;
-import net.ddns.mlgland.towerwars.commands.client.CommandTest;
-import net.ddns.mlgland.towerwars.events.PlayerEvents;
+import net.ddns.mlgland.minetils.commands.MasterCommandHandler;
+import net.ddns.mlgland.minetils.commands.client.CommandTest;
+import net.ddns.mlgland.minetils.events.PlayerEvents;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,7 +15,7 @@ public class MineTils extends JavaPlugin {
         getServer().getConsoleSender().sendMessage("[MineTils] Registered event 1/1 (task 1/3)");
 
         getServer().getConsoleSender().sendMessage("[MineTils] Registering command handler...");
-        getCommand("minetils").setExecutor(new CommandHandler());
+        getCommand("minetils").setExecutor(new MasterCommandHandler());
         getServer().getConsoleSender().sendMessage("[MineTils] Registered command handler (task 2/3)");
 
         getServer().getConsoleSender().sendMessage("[MineTils] Registering commands...");
