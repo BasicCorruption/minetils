@@ -42,12 +42,14 @@ public class CommandBan implements CommandExecutor {
                         target.kickPlayer("§c" + banReason.toString());
                         //target.setBanned(true);
                         Bukkit.getServer().getPluginManager().callEvent(new BanEvent(target, Type.BAN, banReason.toString()));
+                        commandSender.sendMessage("Successfully banned " + target + ": " + banReason);
                         //System.out.println("Banned a player");
                     }
                 } else {
                     target.kickPlayer("§cYou have been banned indefinitely for an unspecified reason.");
                     //target.setBanned(true);
                     Bukkit.getServer().getPluginManager().callEvent(new BanEvent(target, Type.BAN, "You have been banned for an unspecified reason."));
+                    commandSender.sendMessage("Successfully banned " + target);
                     //System.out.println("Banned a player");
                 }
             } else {
@@ -72,6 +74,7 @@ public class CommandBan implements CommandExecutor {
                 if (status) {
                     //target.setBanned(false);
                     Bukkit.getServer().getPluginManager().callEvent(new UnbanEvent(target, Type.UNBAN));
+                    commandSender.sendMessage("Successfully unbanned " + target);
                 } else {
                     commandSender.sendMessage(ChatColor.RED + "Error executing command: invalid argument [0]: player might not be banned, is not online right now, or does not exist");
                 }

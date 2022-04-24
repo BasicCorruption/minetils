@@ -35,9 +35,11 @@ public class CommandKick implements CommandExecutor {
 
                     target.kickPlayer("§c" + kickReason.toString());
                     Bukkit.getServer().getPluginManager().callEvent(new KickEvent(target, Type.KICK));
+                    commandSender.sendMessage("Successfully banned " + target + ": " + kickReason);
                 } else {
                     target.kickPlayer("§cYou have been kicked for an unspecified reason.");
                     Bukkit.getServer().getPluginManager().callEvent(new KickEvent(target, Type.KICK));
+                    commandSender.sendMessage("Successfully banned " + target);
                 }
             } else {
                 commandSender.sendMessage("§4§lYou do not have permission to use this command");
