@@ -44,7 +44,6 @@ public class MineTils extends JavaPlugin {
         Config.save();
 
         Database.setup();
-        Database.get().addDefault("banlist", new ArrayList<String>());
         Database.get().options().copyDefaults(true);
         Database.save();
 
