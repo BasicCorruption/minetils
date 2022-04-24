@@ -3,7 +3,6 @@ package net.ddns.mlgland.minetils.commands.server;
 import net.ddns.mlgland.minetils.Type;
 import net.ddns.mlgland.minetils.config.Database;
 import net.ddns.mlgland.minetils.events.BanEvent;
-import net.ddns.mlgland.minetils.events.KickEvent;
 import net.ddns.mlgland.minetils.events.UnbanEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

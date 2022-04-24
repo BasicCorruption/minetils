@@ -1,13 +1,11 @@
 package net.ddns.mlgland.minetils.commands;
 
-import net.ddns.mlgland.minetils.commands.server.CommandReload;
 import net.ddns.mlgland.minetils.config.Config;
 import net.ddns.mlgland.minetils.config.Database;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 public class MasterCommandHandler implements CommandExecutor {
     @Override

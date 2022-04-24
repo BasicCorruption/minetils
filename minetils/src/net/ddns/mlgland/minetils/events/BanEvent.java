@@ -7,9 +7,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BanEvent extends Event {
 
     Player p;

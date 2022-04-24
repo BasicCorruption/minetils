@@ -10,8 +10,6 @@ import net.ddns.mlgland.minetils.listeners.PlayerEvents;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.ArrayList;
-
 public class MineTils extends JavaPlugin {
 
     @Override

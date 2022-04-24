@@ -3,7 +3,6 @@ package net.ddns.mlgland.minetils.events;
 import net.ddns.mlgland.minetils.Type;
 import net.ddns.mlgland.minetils.config.Database;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
