@@ -1,6 +1,7 @@
 package net.ddns.mlgland.minetils.commands.server;
 
 import net.ddns.mlgland.minetils.Type;
+import net.ddns.mlgland.minetils.config.Database;
 import net.ddns.mlgland.minetils.events.BanEvent;
 import net.ddns.mlgland.minetils.events.KickEvent;
 import net.ddns.mlgland.minetils.events.UnbanEvent;
@@ -9,6 +10,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 public class CommandBan implements CommandExecutor {
@@ -43,7 +45,7 @@ public class CommandBan implements CommandExecutor {
                         //System.out.println("Banned a player");
                     }
                 } else {
-                    target.kickPlayer("§cYou have been banned for an unspecified reason.");
+                    target.kickPlayer("§cYou have been banned indefinitely for an unspecified reason.");
                     //target.setBanned(true);
                     Bukkit.getServer().getPluginManager().callEvent(new BanEvent(target, Type.BAN, "You have been banned for an unspecified reason."));
                     //System.out.println("Banned a player");
@@ -57,14 +59,18 @@ public class CommandBan implements CommandExecutor {
                     commandSender.sendMessage(ChatColor.RED + "Usage: /unban <player>");
                     return true;
                 }
-                Player target = Bukkit.getServer().getPlayer(args[0]);
-                if (target == null) {
+                //Player target = Bukkit.getServer().getPlayer(args[0]);
+                String target = args[0];
+                /*if (target == null) {
                     commandSender.sendMessage(ChatColor.DARK_RED + "Error executing command: invalid argument [0]: player might not be online or is not specified");
                     return true;
-                }
+                }*/
 
-                if (target.isBanned()) {
-                    target.setBanned(false);
+                FileConfiguration db = Database.get();
+                Boolean status = (Boolean) db.get(target + ".status");
+
+                if (status) {
+                    //target.setBanned(false);
                     Bukkit.getServer().getPluginManager().callEvent(new UnbanEvent(target, Type.UNBAN));
                 } else {
                     commandSender.sendMessage(ChatColor.RED + "Error executing command: invalid argument [0]: player might not be banned, is not online right now, or does not exist");
