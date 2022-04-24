@@ -24,7 +24,7 @@ public class MineTils extends JavaPlugin {
         getServer().getConsoleSender().sendMessage("[MineTils] Registered events");
 
         getServer().getConsoleSender().sendMessage("[MineTils] Registering commands");
-        // getCommand("minetils").setExecutor(new MasterCommandHandler());
+        getCommand("minetils").setExecutor(new MasterCommandHandler());
         getCommand("mttest").setExecutor(new CommandTest());
         getCommand("kick").setExecutor(new CommandKick());
         getCommand("ban").setExecutor(cmdBan);

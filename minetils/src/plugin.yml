@@ -25,3 +25,11 @@ commands:
     usage: "/unban <player>"
     aliases:
       - pardon
+  minetils:
+    description: "Central command for minetils"
+    usage: "/mt <command> [args]"
+    aliases:
+      - mt
+      - mtils
+      - minet
+      - mts
