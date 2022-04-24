@@ -16,18 +16,25 @@ Fully Supported Versions: 1.8
 
 Features
 
-Bans/unbans
-Kicks
-YAML ban database
+- Bans/unbans
+
+- Kicks
+
+- YAML ban database
+
  
 
 Permissions
 
-minetils.commands.basic.test - Test command
-minetils.commands.moderation.ban - Ban command
-minetils.commands.moderation.unban - Unban command
-minetils.commands.moderation.kick - Kick command
-minetils.commands.literal_danger.reload - Reload command
+- minetils.commands.basic.test - Test command
+
+- minetils.commands.moderation.ban - Ban command
+
+- minetils.commands.moderation.unban - Unban command
+
+- minetils.commands.moderation.kick - Kick command
+
+- minetils.commands.literal_danger.reload - Reload command
  
 
 Commands
