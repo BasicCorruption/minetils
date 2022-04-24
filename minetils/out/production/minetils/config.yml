@@ -1,0 +1,5 @@
+sql_host: 127.0.0.1
+sql_port: 1433
+sql_database: main
+sql_username: Person123
+sql_password: 123456
