@@ -11,9 +11,11 @@ public class CommandReload {
      public static boolean bind(CommandSender commandSender, Command command, String label, String[] args) {
          Player player = (Player) commandSender;
 
-         if (player.hasPermission("minetils.commands.advanced.reload")) {
+         if (player.hasPermission("minetils.commands.literal_danger.reload")) {
              Config.reload();
              Database.reload();
+         } else {
+             commandSender.sendMessage("§4§lYou do not have permission to use this command");
          }
 
          return true;

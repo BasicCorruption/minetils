@@ -13,30 +13,34 @@ public class CommandKick implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         if (command.getName().equalsIgnoreCase("kick")) {
-            if (args.length == 0) {
-                commandSender.sendMessage(ChatColor.RED + "Usage: /kick <player> [reason]");
-                return true;
-            }
-            Player target = Bukkit.getServer().getPlayer(args[0]);
-            if (target == null) {
-                commandSender.sendMessage(ChatColor.DARK_RED + "Error executing command: invalid argument [0]: player might not be online or is not specified");
-                commandSender.sendMessage(ChatColor.RED + "Usage: /kick <player> [reason]");
-                return true;
-            }
-
-            if (args.length >= 2) {
-                StringBuffer kickReason = new StringBuffer();
-
-                for (int i = 1; i <= (args.length - 1); i++) {
-                    kickReason.append(args[i]);
-                    kickReason.append(" ");
+            if (commandSender.hasPermission("minetils.commands.moderation.kick")) {
+                if (args.length == 0) {
+                    commandSender.sendMessage(ChatColor.RED + "Usage: /kick <player> [reason]");
+                    return true;
+                }
+                Player target = Bukkit.getServer().getPlayer(args[0]);
+                if (target == null) {
+                    commandSender.sendMessage(ChatColor.DARK_RED + "Error executing command: invalid argument [0]: player might not be online or is not specified");
+                    commandSender.sendMessage(ChatColor.RED + "Usage: /kick <player> [reason]");
+                    return true;
                 }
 
-                target.kickPlayer("§c" + kickReason.toString());
-                Bukkit.getServer().getPluginManager().callEvent(new KickEvent(target, Type.KICK));
+                if (args.length >= 2) {
+                    StringBuffer kickReason = new StringBuffer();
+
+                    for (int i = 1; i <= (args.length - 1); i++) {
+                        kickReason.append(args[i]);
+                        kickReason.append(" ");
+                    }
+
+                    target.kickPlayer("§c" + kickReason.toString());
+                    Bukkit.getServer().getPluginManager().callEvent(new KickEvent(target, Type.KICK));
+                } else {
+                    target.kickPlayer("§cYou have been kicked for an unspecified reason.");
+                    Bukkit.getServer().getPluginManager().callEvent(new KickEvent(target, Type.KICK));
+                }
             } else {
-                target.kickPlayer("§cYou have been kicked for an unspecified reason.");
-                Bukkit.getServer().getPluginManager().callEvent(new KickEvent(target, Type.KICK));
+                commandSender.sendMessage("§4§lYou do not have permission to use this command");
             }
         }
         return true;
