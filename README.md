@@ -2,6 +2,8 @@
 
 A simple utility and moderation plugin for SpigotMC.
 
+CurseForge and downloads: [https://www.curseforge.com/minecraft/bukkit-plugins/minetils](https://www.curseforge.com/minecraft/bukkit-plugins/minetils)
+
  
 
 Version Support
