@@ -1,6 +1,7 @@
 package net.ddns.mlgland.minetils.listeners.player;
 
 import net.ddns.mlgland.minetils.config.Database;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
 
@@ -8,13 +9,19 @@ public class OnPlayerJoin {
     public static void invoke(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
+        FileConfiguration db = Database.get();
+
         // check to see if the player is in the ban database
-        Boolean banned = (Boolean) Database.get().get(player.getName() + ".status");
+        Boolean banned = (Boolean) db.get(player.getName() + ".status");
 
         if (banned) {
-            String reason = (String) Database.get().get(player.getName() + ".reason");
+            String reason = (String) db.get(player.getName() + ".reason");
 
             player.kickPlayer("§4You have been banned indefinitely: " + reason);
+        } else {
+            if (!db.get("joinMessage").equals("")) {
+                player.sendMessage((String) db.get("joinMessage"));
+            }
         }
     }
 }
