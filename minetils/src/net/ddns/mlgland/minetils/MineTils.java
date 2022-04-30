@@ -33,11 +33,7 @@ public class MineTils extends JavaPlugin {
         saveDefaultConfig();
         Config.setup();
         Config.save();
-        Config.get().addDefault("sql_host", "127.0.0.1");
-        Config.get().addDefault("sql_port", "1433");
-        Config.get().addDefault("sql_database", "main");
-        Config.get().addDefault("sql_username", "Person123");
-        Config.get().addDefault("sql_password", "123456");
+        Config.get().addDefault("joinMessage", "Welcome to the server! §4§lPowered by MineTils");
         Config.get().options().copyDefaults(true);
         Config.save();
 
