@@ -21,7 +21,7 @@ public class OnPlayerJoin {
 
             player.kickPlayer("§4You have been banned indefinitely: " + reason);
         } else {
-            if (!cf.get("joinMessage").equals("")) {
+            if (!cf.get("enableJoinMessage").equals(true)) {
                 player.sendMessage(cf.get("joinMessage").toString());
             }
         }
