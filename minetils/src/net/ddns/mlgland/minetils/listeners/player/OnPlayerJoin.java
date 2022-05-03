@@ -25,5 +25,7 @@ public class OnPlayerJoin {
                 player.sendMessage(cf.get("joinMessage").toString());
             }
         }
+
+        event.setJoinMessage("");
     }
 }
