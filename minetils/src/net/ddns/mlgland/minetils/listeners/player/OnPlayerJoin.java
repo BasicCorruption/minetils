@@ -21,11 +21,10 @@ public class OnPlayerJoin {
 
             player.kickPlayer("§4You have been banned indefinitely: " + reason);
         } else {
-            if (!cf.get("enableJoinMessage").equals(true) && !player.hasPermission("minetils.bypass.messages.join")) {
+            if (!cf.get("enableJoinMessage").equals(true)) {
                 player.sendMessage(cf.get("joinMessage").toString());
             }
         }
-
         event.setJoinMessage("");
     }
 }
