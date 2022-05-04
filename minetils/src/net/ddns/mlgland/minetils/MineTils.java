@@ -34,7 +34,6 @@ public class MineTils extends JavaPlugin {
         Config.setup();
         Config.save();
         Config.get().addDefault("joinMessage", "Welcome to the server! §4§lPowered by MineTils");
-        Config.get().addDefault("enableJoinMessages", false);
         Config.get().options().copyDefaults(true);
         Config.save();
 
