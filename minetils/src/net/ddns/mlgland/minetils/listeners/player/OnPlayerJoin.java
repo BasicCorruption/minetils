@@ -24,7 +24,9 @@ public class OnPlayerJoin {
             if (!cf.get("joinMessage").equals("")) {
                 player.sendMessage(cf.get("joinMessage").toString());
             }
+            if (cf.get("enableJoinAnnouncement").equals(true)) {
+                event.setJoinMessage("");
+            }
         }
-        event.setJoinMessage("");
     }
 }
