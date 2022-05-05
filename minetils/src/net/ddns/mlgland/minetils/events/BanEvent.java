@@ -23,8 +23,8 @@ public class BanEvent extends Event {
         switch (t) {
             case BAN:
                 //db.createSection(p.getName());
-                db.set(p.getName() + ".status", true);
-                db.set(p.getName() + ".reason", r);
+                db.set(p.getName() + ".ban_status", true);
+                db.set(p.getName() + ".ban_reason", r);
                 //System.out.println("Added a player to the ban database");
                 break;
             case KICK:

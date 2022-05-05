@@ -22,7 +22,7 @@ public class UnbanEvent extends Event {
             case KICK:
                 break;
             case UNBAN:
-                db.set(p + ".status", false);
+                db.set(p + ".ban_status", false);
                 break;
         }
     }
