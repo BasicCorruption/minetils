@@ -1,7 +1,7 @@
-package net.ddns.mlgland.minetils.commands;
+package net.mlgland.minetils.commands;
 
-import net.ddns.mlgland.minetils.config.Config;
-import net.ddns.mlgland.minetils.config.Database;
+import net.mlgland.minetils.config.Config;
+import net.mlgland.minetils.config.Database;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

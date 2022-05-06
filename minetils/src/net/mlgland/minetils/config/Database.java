@@ -1,4 +1,4 @@
-package net.ddns.mlgland.minetils.config;
+package net.mlgland.minetils.config;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -7,13 +7,12 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class Config {
-
-    private static File file = new File(Bukkit.getServer().getPluginManager().getPlugin("MineTils").getDataFolder(), "config.yml");;
+public class Database {
+    private static File file = new File(Bukkit.getServer().getPluginManager().getPlugin("MineTils").getDataFolder(), "database.yml");
     private static FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 
     public static void setup() {
-        file = new File(Bukkit.getServer().getPluginManager().getPlugin("MineTils").getDataFolder(), "config.yml");
+        file = new File(Bukkit.getServer().getPluginManager().getPlugin("MineTils").getDataFolder(), "database.yml");
 
         if (!file.exists()) {
             try {
@@ -41,5 +40,4 @@ public class Config {
     public static void reload() {
         config = YamlConfiguration.loadConfiguration(file);
     }
-
 }

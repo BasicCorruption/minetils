@@ -1,7 +1,7 @@
-package net.ddns.mlgland.minetils.events;
+package net.mlgland.minetils.events;
 
-import net.ddns.mlgland.minetils.Type;
-import net.ddns.mlgland.minetils.config.Database;
+import net.mlgland.minetils.Type;
+import net.mlgland.minetils.config.Database;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

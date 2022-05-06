@@ -1,12 +1,12 @@
-package net.ddns.mlgland.minetils;
+package net.mlgland.minetils;
 
-import net.ddns.mlgland.minetils.commands.MasterCommandHandler;
-import net.ddns.mlgland.minetils.commands.client.CommandTest;
-import net.ddns.mlgland.minetils.commands.server.CommandBan;
-import net.ddns.mlgland.minetils.commands.server.CommandKick;
-import net.ddns.mlgland.minetils.config.Config;
-import net.ddns.mlgland.minetils.config.Database;
-import net.ddns.mlgland.minetils.listeners.PlayerEvents;
+import net.mlgland.minetils.commands.MasterCommandHandler;
+import net.mlgland.minetils.commands.client.CommandTest;
+import net.mlgland.minetils.commands.server.CommandBan;
+import net.mlgland.minetils.commands.server.CommandKick;
+import net.mlgland.minetils.config.Config;
+import net.mlgland.minetils.config.Database;
+import net.mlgland.minetils.listeners.PlayerEvents;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 

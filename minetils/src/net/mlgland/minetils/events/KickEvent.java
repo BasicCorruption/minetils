@@ -1,6 +1,6 @@
-package net.ddns.mlgland.minetils.events;
+package net.mlgland.minetils.events;
 
-import net.ddns.mlgland.minetils.Type;
+import net.mlgland.minetils.Type;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;

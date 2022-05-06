@@ -1,6 +1,6 @@
-package net.ddns.mlgland.minetils.listeners;
+package net.mlgland.minetils.listeners;
 
-import net.ddns.mlgland.minetils.listeners.player.OnPlayerJoin;
+import net.mlgland.minetils.listeners.player.OnPlayerJoin;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;

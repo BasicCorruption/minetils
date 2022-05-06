@@ -1,4 +1,4 @@
-package net.ddns.mlgland.minetils;
+package net.mlgland.minetils;
 
 public enum Type {
     KICK,

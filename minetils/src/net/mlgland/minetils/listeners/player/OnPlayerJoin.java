@@ -1,7 +1,7 @@
-package net.ddns.mlgland.minetils.listeners.player;
+package net.mlgland.minetils.listeners.player;
 
-import net.ddns.mlgland.minetils.config.Config;
-import net.ddns.mlgland.minetils.config.Database;
+import net.mlgland.minetils.config.Config;
+import net.mlgland.minetils.config.Database;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;

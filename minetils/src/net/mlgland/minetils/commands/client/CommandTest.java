@@ -1,4 +1,4 @@
-package net.ddns.mlgland.minetils.commands.client;
+package net.mlgland.minetils.commands.client;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
