@@ -2,7 +2,7 @@ name: MineTils
 version: 0.2.0
 author: SidGames5
 main: net.mlgland.minetils.MineTils
-api-version: 1.8
+api-version: 1.18
 commands:
   mttest:
     description: "Tests the plugin"
@@ -10,21 +10,6 @@ commands:
     aliases:
       - mtest
       - minetilstest
-  kick:
-    description: "Kicks a player"
-    usage: "/kick <player> [reason]"
-    aliases:
-      - remove
-  ban:
-    description: "Bans a player"
-    usage: "/ban <player> [reason]"
-    aliases:
-      - permban
-  unban:
-    description: "Unbans a banned player"
-    usage: "/unban <player>"
-    aliases:
-      - pardon
   minetils:
     description: "Central command for minetils"
     usage: "/mt <command> [args]"

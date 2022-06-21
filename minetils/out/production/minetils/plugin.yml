@@ -1,8 +1,8 @@
 name: MineTils
 version: 0.2.0
 author: SidGames5
-main: net.ddns.mlgland.minetils.MineTils
-api-version: 1.8
+main: net.mlgland.minetils.MineTils
+api-version: 1.18
 commands:
   mttest:
     description: "Tests the plugin"

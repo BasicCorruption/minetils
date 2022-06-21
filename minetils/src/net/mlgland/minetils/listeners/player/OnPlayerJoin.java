@@ -13,20 +13,11 @@ public class OnPlayerJoin {
         FileConfiguration db = Database.get();
         FileConfiguration cf = Config.get();
 
-        // check to see if the player is in the ban database
-        Boolean banned = (Boolean) db.get(player.getName() + ".status");
-
-        if (banned) {
-            String reason = (String) db.get(player.getName() + ".reason");
-
-            player.kickPlayer("§4You have been banned indefinitely: " + reason);
-        } else {
-            if (!cf.get("joinMessage").equals("")) {
-                player.sendMessage(cf.get("joinMessage").toString());
-            }
-            if (cf.get("enableJoinAnnouncement").equals(true)) {
-                event.setJoinMessage("");
-            }
+        if (!cf.get("joinMessage").equals("")) {
+            player.sendMessage(cf.get("joinMessage").toString());
+        }
+        if (cf.get("enableJoinAnnouncement").equals(true)) {
+            event.setJoinMessage("");
         }
     }
 }
