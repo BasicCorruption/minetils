@@ -10,21 +10,6 @@ commands:
     aliases:
       - mtest
       - minetilstest
-  kick:
-    description: "Kicks a player"
-    usage: "/kick <player> [reason]"
-    aliases:
-      - remove
-  ban:
-    description: "Bans a player"
-    usage: "/ban <player> [reason]"
-    aliases:
-      - permban
-  unban:
-    description: "Unbans a banned player"
-    usage: "/unban <player>"
-    aliases:
-      - pardon
   minetils:
     description: "Central command for minetils"
     usage: "/mt <command> [args]"
@@ -33,3 +18,59 @@ commands:
       - mtils
       - minet
       - mts
+  gamemode:
+    description: "Changes own gamemode"
+    usage: "/gamemode <gamemode>"
+    aliases:
+      - gm
+      - gmode
+      - gmod
+      - gmodemode
+  gms:
+    description: "Changes own gamemode to survival"
+    usage: "/gms"
+    aliases:
+      - gm0
+      - gmsurvival
+      - gsurvival
+      - gmodesurvival
+      - gamemodesurvival
+      - gamemode0
+      - gmode0
+      - gmod0
+  gmc:
+    description: "Changes own gamemode to creative"
+    usage: "/gmc"
+    aliases:
+      - gm1
+      - gmcreative
+      - gcreative
+      - gmodecreative
+      - gamemodecreative
+      - gamemode1
+      - gmode1
+      - gmod1
+  gma:
+    description: "Changes own gamemode to adventure"
+    usage: "/gma"
+    aliases:
+      - gm2
+      - gmadventure
+      - gadventure
+      - gmodeadventure
+      - gamemodeadventure
+      - gamemode2
+      - gmode2
+      - gmod2
+  gmsp:
+    description: "Changes own gamemode to spectator"
+    usage: "/gmsp"
+    aliases:
+      - gm3
+      - gmspectator
+      - gspectator
+      - gmodespectator
+      - gamemodespectator
+      - gamemode3
+      - gmode3
+      - gmod3
