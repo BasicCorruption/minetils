@@ -27,7 +27,7 @@ public class CommandGamemode implements CommandExecutor {
                     // switch the gamemode to survival
                     player.setGameMode(SURVIVAL);
                     player.sendMessage("§aYou have set your gamemode to survival!");
-                    System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to survival");
+                    System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to survival/0");
                     break;
                 case "gmc":
                 case "gm1":
@@ -41,7 +41,7 @@ public class CommandGamemode implements CommandExecutor {
                     // switch the gamemode to creative
                     player.setGameMode(CREATIVE);
                     player.sendMessage("§aYou have set your gamemode to creative!");
-                    System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to creative");
+                    System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to creative/1");
                     break;
                 case "gma":
                 case "gm2":
@@ -55,7 +55,7 @@ public class CommandGamemode implements CommandExecutor {
                     // switch the gamemode to adventure
                     player.setGameMode(ADVENTURE);
                     player.sendMessage("§aYou have set your gamemode to adventure!");
-                    System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to adventure");
+                    System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to adventure/2");
                     break;
                 case "gmsp":
                 case "gm3":
@@ -69,7 +69,7 @@ public class CommandGamemode implements CommandExecutor {
                     // switch the gamemode to spectator
                     player.setGameMode(SPECTATOR);
                     player.sendMessage("§aYou have set your gamemode to spectator!");
-                    System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to spectator");
+                    System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to spectator/3");
                     break;
                 default:
                     // check the first argument
@@ -79,25 +79,25 @@ public class CommandGamemode implements CommandExecutor {
                             case "survival":
                                 player.setGameMode(SURVIVAL);
                                 player.sendMessage("§aYou have set your gamemode to survival!");
-                                System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to survival");
+                                System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to survival/0");
                                 break;
                             case "1":
                             case "creative":
                                 player.setGameMode(CREATIVE);
                                 player.sendMessage("§aYou have set your gamemode to creative!");
-                                System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to creative");
+                                System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to creative/1");
                                 break;
                             case "2":
                             case "adventure":
                                 player.setGameMode(ADVENTURE);
                                 player.sendMessage("§aYou have set your gamemode to adventure!");
-                                System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to adventure");
+                                System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to adventure/2");
                                 break;
                             case "3":
                             case "spectator":
                                 player.setGameMode(SPECTATOR);
                                 player.sendMessage("§aYou have set your gamemode to spectator!");
-                                System.out.println("[Minetils] [Admin Log]" + player.getName() + " has set their gamemode to spectator");
+                                System.out.println("[Minetils] [Admin Log] " + player.getName() + " has set their gamemode to spectator/3");
                                 break;
                             default:
                                 player.sendMessage("§4§lInvalid gamemode");
