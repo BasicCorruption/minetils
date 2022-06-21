@@ -3,13 +3,14 @@ package net.mlgland.minetils.commands.server;
 import net.mlgland.minetils.config.Config;
 import net.mlgland.minetils.config.Database;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import static org.bukkit.GameMode.*;
 
-public class CommandGamemode {
-    public static boolean bind(CommandSender commandSender, Command command, String label, String[] args) {
+public class CommandGamemode implements CommandExecutor {
+    public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
         Player player = (Player) commandSender;
 
         if (player.hasPermission("minetils.commands.gamemode")) {
