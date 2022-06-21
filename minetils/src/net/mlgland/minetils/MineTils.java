@@ -2,6 +2,7 @@ package net.mlgland.minetils;
 
 import net.mlgland.minetils.commands.MasterCommandHandler;
 import net.mlgland.minetils.commands.client.CommandTest;
+import net.mlgland.minetils.commands.server.CommandGamemode;
 import net.mlgland.minetils.config.Config;
 import net.mlgland.minetils.config.Database;
 import net.mlgland.minetils.listeners.PlayerEvents;
@@ -13,6 +14,7 @@ public class MineTils extends JavaPlugin {
     @Override
     public void onEnable() {
         // make new instances
+        CommandGamemode cmdGamemode = new CommandGamemode();
 
         getServer().getConsoleSender().sendMessage("[MineTils] Registering events");
         getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
@@ -21,6 +23,11 @@ public class MineTils extends JavaPlugin {
         getServer().getConsoleSender().sendMessage("[MineTils] Registering commands");
         getCommand("minetils").setExecutor(new MasterCommandHandler());
         getCommand("mttest").setExecutor(new CommandTest());
+        getCommand("gamemode").setExecutor(cmdGamemode);
+        getCommand("gms").setExecutor(cmdGamemode);
+        getCommand("gmc").setExecutor(cmdGamemode);
+        getCommand("gma").setExecutor(cmdGamemode);
+        getCommand("gmsp").setExecutor(cmdGamemode);
         getServer().getConsoleSender().sendMessage("[MineTils] Registered commands");
 
         getConfig().options().copyDefaults();
