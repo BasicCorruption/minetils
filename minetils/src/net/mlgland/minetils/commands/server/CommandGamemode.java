@@ -62,6 +62,33 @@ public class CommandGamemode {
                     // switch the gamemode to spectator
                     player.setGameMode(SPECTATOR);
                     break;
+                default:
+                    // check the first argument
+                    if (args.length > 0) {
+                        switch (args[0]) {
+                            case "0":
+                            case "survival":
+                                player.setGameMode(SURVIVAL);
+                                break;
+                            case "1":
+                            case "creative":
+                                player.setGameMode(CREATIVE);
+                                break;
+                            case "2":
+                            case "adventure":
+                                player.setGameMode(ADVENTURE);
+                                break;
+                            case "3":
+                            case "spectator":
+                                player.setGameMode(SPECTATOR);
+                                break;
+                            default:
+                                player.sendMessage("§4§lInvalid gamemode");
+                                break;
+                        }
+                    } else {
+                        player.sendMessage("Usage: /gamemode <gamemode name/id>");
+                    }
             }
         } else {
             commandSender.sendMessage("§4§lYou do not have permission to use this command");
