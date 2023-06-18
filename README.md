@@ -1,8 +1,8 @@
 # minetils
 
-## Important: This project has been discontinued. For updated versions, please see SidGames5/minetils.
+Notice: the official version developed by the MLG Land has been discontinued.
 
-A simple utility and moderation plugin for SpigotMC.
+A simple utility and moderation plugin for Bukkit servers.
 
 CurseForge and downloads: [https://www.curseforge.com/minecraft/bukkit-plugins/minetils](https://www.curseforge.com/minecraft/bukkit-plugins/minetils)
 
