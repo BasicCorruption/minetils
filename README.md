@@ -1,5 +1,7 @@
 # minetils
 
+## Important: This project has been discontinued. For updated versions, please see SidGames5/minetils.
+
 A simple utility and moderation plugin for SpigotMC.
 
 CurseForge and downloads: [https://www.curseforge.com/minecraft/bukkit-plugins/minetils](https://www.curseforge.com/minecraft/bukkit-plugins/minetils)
